@@ -1,5 +1,6 @@
 package com.example.authprac230710.service;
 
+import com.example.authprac230710.entity.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,6 +19,8 @@ public class CustomUserDetails implements UserDetails {
 
     private String username;
     private String password;
+
+    @Getter
     private String nickname;
 
     @Override
@@ -27,12 +30,12 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return this.password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return this.username;
     }
 
     @Override
@@ -53,5 +56,23 @@ public class CustomUserDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public CustomUserDetails newUserDetails(UserEntity userEntity){
+        return CustomUserDetails
+                .builder()
+                .id(userEntity.getId())
+                .username(userEntity.getUsername())
+                .password(userEntity.getPassword())
+                .nickname(userEntity.getNickname())
+                .build();
+    }
+
+    public UserEntity newUserEntity(){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUsername(username);
+        userEntity.setPassword(password);
+        userEntity.setNickname(nickname);
+        return userEntity;
     }
 }

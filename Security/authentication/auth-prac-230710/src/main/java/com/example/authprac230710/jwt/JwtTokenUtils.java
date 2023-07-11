@@ -29,7 +29,7 @@ public class JwtTokenUtils {
     }
 
 
-    //token 생성 method
+    //jwt token 생성 method
     public String generateToken(UserDetails userDetails){
 
         //JWT 에 담고싶은 내용 추가. 내용들을 claims 라고 함
@@ -44,4 +44,26 @@ public class JwtTokenUtils {
                 .compact(); // .build() 와 같음
     }
 
+    //jwt token 유효성 체크 method (jwt 를 해석하는 과정에서 유효하지않으면 예외발생)
+    public boolean validate(String token){
+        try{
+
+            //parseClaimsJwt() : 암호화된 jwt 를 해석하는 method
+            jwtParser.parseClaimsJwt(token);
+            return true;
+
+        }catch (Exception e){
+
+            //parseClaimsJwt() 실행 오류시 jwt 의 유효성 입증 실패
+            return false;
+
+        }
+    }
+
+    //jwt token 을 인자로 받고, 그 토큰을 해석하여 사용자 정보를 회수하는 메서드
+    public Claims parseClaims(String token){
+        return jwtParser
+                .parseClaimsJwt(token)
+                .getBody();
+    }
 }

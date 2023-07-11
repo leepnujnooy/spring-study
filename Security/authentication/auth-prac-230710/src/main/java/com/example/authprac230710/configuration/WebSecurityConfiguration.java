@@ -20,13 +20,13 @@ public class WebSecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
                         authHttp -> authHttp
-                                .requestMatchers("/users").permitAll() // "/" 는 누구든 들어올 수 있다
+                                .requestMatchers("/users","/users/signup").permitAll() // "/" 는 누구든 들어올 수 있다
                                 .requestMatchers("/users/main","/users/logout").authenticated() // "main" 은 인가된 사용자만 접근할 수 있다
-                                .requestMatchers("/users/signup").anonymous() // "signup" 은 미인증 사용자만 접근할 수 있다
+                                .requestMatchers("/").anonymous() // "signup" 은 미인증 사용자만 접근할 수 있다
                 )
                 .formLogin(
                         formLogin -> formLogin
-                                .loginPage("/users") //로그인 경로
+                                .loginPage("/users/login") //로그인 경로
                                 .defaultSuccessUrl("/users/main") //로그인 성공시 디폴트 경로
                                 .failureUrl("/users/login?fail") //로그인 실패시 경로
                                 .permitAll()

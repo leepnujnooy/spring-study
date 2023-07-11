@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8e3bd1f-25e0-4295-bacd-cc33ec323aca" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../authentication/auth-prac-230710/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication/auth-prac-230710/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/configuration/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/jwt/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/jwt/JwtTokenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/service/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/service/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication/auth-prac-230710/src/main/java/com/example/authprac230710/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2SPxXPS7exgBNAWq4yCFmNKiGPj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/yunjunpil/git/spring-study/Security/oauth2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="b8e3bd1f-25e0-4295-bacd-cc33ec323aca" name="변경" comment="" />
+      <created>1689062056524</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689062056524</updated>
+      <workItem from="1689062058109" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
