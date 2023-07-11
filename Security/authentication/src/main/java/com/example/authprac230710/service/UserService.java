@@ -18,7 +18,6 @@ import java.util.Optional;
 public class UserService implements UserDetailsManager {
 
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<UserEntity> optional = userRepository.findByUsername(username);
@@ -30,7 +29,9 @@ public class UserService implements UserDetailsManager {
     }
     @Override
     public void createUser(UserDetails user) {
+        //db 에서 클라이언트의 요청에 담겨 온 username 을 사용하는 user 가 이미 존재하는지 확인
         if(userExists(user.getUsername())){
+            //이미 존재한다면 예외 처리
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
 
@@ -39,11 +40,12 @@ public class UserService implements UserDetailsManager {
                     .username(user.getUsername())
                     .password(user.getPassword())
                     .build();
+            //db에 user 저장
             userRepository.save(customUserDetails.newUserEntity());
         }catch (ClassCastException e){
+            //예상치 못한 에러 처리
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
     }
 
     @Override

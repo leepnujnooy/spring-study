@@ -58,6 +58,7 @@ public class CustomUserDetails implements UserDetails {
         return true;
     }
 
+    //UserEntity -->> UserDetails
     public CustomUserDetails newUserDetails(UserEntity userEntity){
         return CustomUserDetails
                 .builder()
@@ -68,6 +69,7 @@ public class CustomUserDetails implements UserDetails {
                 .build();
     }
 
+    //UserDetails -->> UserEntity
     public UserEntity newUserEntity(){
         UserEntity userEntity = new UserEntity();
         userEntity.setUsername(username);
