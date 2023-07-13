@@ -22,7 +22,6 @@ public class WebSecurityConfiguration {
                         authHttp -> authHttp
                                 .requestMatchers("/users","/users/signup").permitAll() // "/" 는 누구든 들어올 수 있다
                                 .requestMatchers("/users/main","/users/logout").authenticated() // "main" 은 인가된 사용자만 접근할 수 있다
-                                .requestMatchers("/").anonymous() // "signup" 은 미인증 사용자만 접근할 수 있다
                 )
                 .formLogin(
                         formLogin -> formLogin
